@@ -32,6 +32,10 @@ body {
   background-color: @body-bg;
 }
 
+p {
+  line-height: 18px;
+}
+
 // Reset fonts for relevant elements
 input,
 button,
@@ -51,13 +55,19 @@ a {
 
   &:hover,
   &:focus {
-    color: @link-hover-color;
     text-decoration: @link-hover-decoration;
   }
 
   &:focus {
     .tab-focus();
   }
+}
+
+p a {
+  font-weight: bold;
+}
+p a:hover {
+  text-decoration: underline;
 }
 
 

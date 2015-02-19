@@ -14,7 +14,7 @@
 @gray-light:             lighten(@gray-base, 46.7%); // #777
 @gray-lighter:           lighten(@gray-base, 93.5%); // #eee
 
-@brand-primary:         darken(#428bca, 6.5%); // #337ab7
+@brand-primary:         #013888;
 @brand-success:         #5cb85c;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
@@ -28,7 +28,7 @@
 //** Background color for `<body>`.
 @body-bg:               #fff;
 //** Global text color on `<body>`.
-@text-color:            @gray-dark;
+@text-color:            @gray-base;
 
 //** Global textual link color.
 @link-color:            @brand-primary;
@@ -42,22 +42,65 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-face{
+  font-family: "Century Gothic W01";
+  src: url("../fonts/jubla/bd45538f-4200-4946-b177-02de8337032d.eot?#iefix");
+  src: url("../fonts/jubla/bd45538f-4200-4946-b177-02de8337032d.eot?#iefix") format("eot"),
+       url("../fonts/jubla/9908cdad-7524-4206-819e-4f345a666324.woff") format("woff"),
+       url("../fonts/jubla/b710c26a-f1ae-4fb8-a9fe-570fd829cbf1.ttf") format("truetype"),
+       url("../fonts/jubla/c9e387df-c0d3-42e1-8de6-78c41f68594c.svg#c9e387df-c0d3-42e1-8de6-78c41f68594c") format("svg");
+}
+@font-face{
+  font-family: "Century Gothic W01";
+  src: url("../fonts/jubla/b247e158-e647-4a3d-9637-944de5124043.eot?#iefix");
+  src: url("../fonts/jubla/b247e158-e647-4a3d-9637-944de5124043.eot?#iefix") format("eot"),
+       url("../fonts/jubla/2ef5ecda-1772-45e2-843f-a13f5d76ed3a.woff") format("woff"),
+       url("../fonts/jubla/33cf10ca-a6bb-4888-a320-d38720c9847b.ttf") format("truetype"),
+       url("../fonts/jubla/3428a0e6-cb4d-408a-8331-cc78554ab49c.svg#3428a0e6-cb4d-408a-8331-cc78554ab49c") format("svg");
+  font-weight: bold;
+}
+@font-face{
+  font-family: "Century Gothic W01";
+  src: url("../fonts/jubla/38471ac0-7849-4a39-9f97-f89d78f42142.eot?#iefix");
+  src: url("../fonts/jubla/38471ac0-7849-4a39-9f97-f89d78f42142.eot?#iefix") format("eot"),
+       url("../fonts/jubla/483a662e-88d8-4865-8dd3-1515c67fe28b.woff") format("woff"),
+       url("../fonts/jubla/d29e72e3-fcd5-4fa6-8cfb-986a2e33e105.ttf") format("truetype"),
+       url("../fonts/jubla/1e08e1b1-b459-4819-95bc-54667cb4d9b5.svg#1e08e1b1-b459-4819-95bc-54667cb4d9b5") format("svg");
+  font-style: italic;
+}
+@font-face{
+  font-family: "HelveticaNeueW01-57Cn";
+  src: url("../fonts/jubla/ecaa98fe-425a-42de-846b-c235f0dbc449.eot?#iefix");
+  src: url("../fonts/jubla/ecaa98fe-425a-42de-846b-c235f0dbc449.eot?#iefix") format("eot"),
+       url("../fonts/jubla/842088d0-1ae2-40d0-8561-3c95761ba7a6.woff") format("woff"),
+       url("../fonts/jubla/c74505d5-13e8-47ed-94a8-630aab4da3e6.ttf") format("truetype"),
+       url("../fonts/jubla/6cd480d1-47d0-48b4-86bd-283db2cb9235.svg#6cd480d1-47d0-48b4-86bd-283db2cb9235") format("svg");
+}
+@font-face{
+  font-family: "HelveticaNeueW01-77BdCn 692722";
+  src: url("../fonts/jubla/83d5bc89-af33-46a9-8fe3-15d87784f50e.eot?#iefix");
+  src: url("../fonts/jubla/83d5bc89-af33-46a9-8fe3-15d87784f50e.eot?#iefix") format("eot"),
+       url("../fonts/jubla/102ab74c-0e84-4fe5-a17a-b20fb643591a.woff") format("woff"),
+       url("../fonts/jubla/1d146b29-55e2-485b-96aa-5cb628e7e9eb.ttf") format("truetype"),
+       url("../fonts/jubla/d90b3358-e1e2-4abb-ba96-356983a54c22.svg#d90b3358-e1e2-4abb-ba96-356983a54c22") format("svg");
+}
+
+@font-family-sans-serif:  'Century Gothic W01', Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
-@font-size-base:          14px;
+@font-size-base:          13px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 
-@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
-@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
-@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
-@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
-@font-size-h5:            @font-size-base;
-@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+@font-size-h1:            24px;
+@font-size-h2:            16px;
+@font-size-h3:            14px;
+@font-size-h4:            14px;
+@font-size-h5:            14px;
+@font-size-h6:            12px;
 
 //** Unit-less `line-height` for use in components like buttons.
 @line-height-base:        1.428571429; // 20/14
@@ -65,9 +108,7 @@
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
-@headings-font-family:    inherit;
-@headings-font-weight:    500;
-@headings-line-height:    1.1;
+@headings-line-height:    normal;
 @headings-color:          inherit;
 
 
@@ -206,9 +247,6 @@
 @input-height-large:             (ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
 //** Small `.form-control` height
 @input-height-small:             (floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
-
-//** `.form-group` margin
-@form-group-margin-bottom:       15px;
 
 @legend-color:                   @gray-dark;
 @legend-border-color:            #e5e5e5;
@@ -351,7 +389,7 @@
 //##
 
 // Basics of a navbar
-@navbar-height:                    50px;
+@navbar-height:                    29px;
 @navbar-margin-bottom:             @line-height-computed;
 @navbar-border-radius:             @border-radius-base;
 @navbar-padding-horizontal:        floor((@grid-gutter-width / 2));
@@ -359,14 +397,14 @@
 @navbar-collapse-max-height:       340px;
 
 @navbar-default-color:             #777;
-@navbar-default-bg:                #f8f8f8;
-@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-bg:                #e6e6e6;
+@navbar-default-border:            #e6e6e6;
 
 // Navbar links
-@navbar-default-link-color:                #777;
-@navbar-default-link-hover-color:          #333;
+@navbar-default-link-color:                #646464;
+@navbar-default-link-hover-color:          #646464;
 @navbar-default-link-hover-bg:             transparent;
-@navbar-default-link-active-color:         #555;
+@navbar-default-link-active-color:         #646464;
 @navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);
 @navbar-default-link-disabled-color:       #ccc;
 @navbar-default-link-disabled-bg:          transparent;

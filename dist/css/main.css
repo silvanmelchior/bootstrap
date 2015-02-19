@@ -1,0 +1,10 @@
+#footer-skyline {
+  height: 93px;
+  background: url("../img/skyline.png") repeat-x;
+  margin-top: 50px;
+}
+
+#footer {
+  background-color: #013888;
+  padding-bottom: 30px;
+}

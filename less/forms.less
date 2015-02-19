@@ -141,13 +141,9 @@ output {
   &[disabled],
   &[readonly],
   fieldset[disabled] & {
+    cursor: @cursor-disabled;
     background-color: @input-bg-disabled;
     opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
-  }
-  
-  &[disabled],
-  fieldset[disabled] & {
-    cursor: @cursor-disabled;
   }
 
   // Reset height for `textarea`s
@@ -202,7 +198,7 @@ input[type="search"] {
 // horizontal forms, use the predefined grid classes.
 
 .form-group {
-  margin-bottom: @form-group-margin-bottom;
+  margin-bottom: 15px;
 }
 
 
